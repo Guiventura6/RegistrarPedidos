@@ -1,4 +1,5 @@
-﻿
+﻿using System.Text;
+using System.Globalization;
 namespace CadastrarPedido.Entities
 {
     class Product
@@ -13,6 +14,14 @@ namespace CadastrarPedido.Entities
         {
             Name = name;
             Price = price;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{Name}, ${Price.ToString("F2", CultureInfo.InvariantCulture )}");
+            
+            return sb.ToString();
         }
     }   
 }

@@ -49,6 +49,11 @@ namespace CadastrarPedido
             Console.WriteLine("ORDER SUMMARY:");
             Console.WriteLine(order);
             Console.WriteLine(client);
+            Console.WriteLine("Order items:");
+            foreach (OrderItem item in order.Items)
+            {
+                Console.WriteLine(item);
+            }
 
             
         }
