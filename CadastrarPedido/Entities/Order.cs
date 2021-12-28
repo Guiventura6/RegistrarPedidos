@@ -47,7 +47,7 @@ namespace CadastrarPedido.Entities
             sb.Append("Order moment: ");
             sb.AppendLine(Moment.ToString());
             sb.Append("Order status: ");
-            sb.AppendLine(Status.ToString());
+            sb.Append(Status.ToString());
             return sb.ToString();
         }
     }

@@ -48,6 +48,7 @@ namespace CadastrarPedido
             Console.WriteLine();
             Console.WriteLine("ORDER SUMMARY:");
             Console.WriteLine(order);
+            Console.WriteLine(client);
 
             
         }

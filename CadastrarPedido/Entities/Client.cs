@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace CadastrarPedido.Entities
 {
@@ -17,6 +18,15 @@ namespace CadastrarPedido.Entities
             Name = name;
             Email = email;
             BirthDate = birthDate;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append("Client: ");
+            sb.AppendLine($"{Name} ({BirthDate:dd/MM/yyyy}) - {Email}");
+            return sb.ToString();
         }
     }
 }
