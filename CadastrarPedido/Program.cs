@@ -45,8 +45,9 @@ namespace CadastrarPedido
                 OrderItem orderItem = new OrderItem(quantity, price, product);
                 order.Items.Add(orderItem);
             }
-            Console.WriteLine();    
-
+            Console.WriteLine();
+            Console.WriteLine("ORDER SUMMARY:");
+            Console.WriteLine(order);
 
             
         }

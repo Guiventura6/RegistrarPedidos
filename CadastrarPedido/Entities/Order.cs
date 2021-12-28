@@ -41,5 +41,14 @@ namespace CadastrarPedido.Entities
             return sum;
         }
 
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Order moment: ");
+            sb.AppendLine(Moment.ToString());
+            sb.Append("Order status: ");
+            sb.AppendLine(Status.ToString());
+            return sb.ToString();
+        }
     }
 }
