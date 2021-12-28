@@ -27,6 +27,8 @@ namespace CadastrarPedido
             Console.WriteLine("Enter order data:");
             Console.Write("Status: ");
             OrderStatus status = Enum.Parse<OrderStatus>(Console.ReadLine());
+
+            Order order = new Order(DateTime.Now, status);
             Console.Write("How many items to this order? ");
             int nItems = int.Parse(Console.ReadLine());
             for (int i = 1; i <= nItems; i++)
@@ -41,8 +43,10 @@ namespace CadastrarPedido
 
                 Product product = new Product(name, price);
                 OrderItem orderItem = new OrderItem(quantity, price, product);
+                order.Items.Add(orderItem);
             }
             Console.WriteLine();    
+
 
             
         }

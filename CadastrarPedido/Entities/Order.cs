@@ -15,11 +15,10 @@ namespace CadastrarPedido.Entities
         {
         }
 
-        public Order(DateTime moment, OrderStatus status, List<OrderItem> items)
+        public Order(DateTime moment, OrderStatus status)
         {
             Moment = moment;
-            Status = status;
-            Items = items;
+            Status = status;            
         }
 
         public void AddItem(OrderItem item)
