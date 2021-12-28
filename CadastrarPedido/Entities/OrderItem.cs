@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 
 namespace CadastrarPedido.Entities
 {
@@ -24,6 +25,13 @@ namespace CadastrarPedido.Entities
         public double SubTotal()
         {            
             return Quantity * Price;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"{Product}, Quantity: {Quantity}, Subtotal: ${SubTotal().ToString("F2", CultureInfo.InvariantCulture)}");
+            return sb.ToString();
         }
     }
 }

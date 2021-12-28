@@ -19,7 +19,7 @@ namespace CadastrarPedido.Entities
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"{Name}, ${Price.ToString("F2", CultureInfo.InvariantCulture )}");
+            sb.Append($"{Name}, ${Price.ToString("F2", CultureInfo.InvariantCulture )}");
             
             return sb.ToString();
         }

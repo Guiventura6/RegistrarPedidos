@@ -8,7 +8,6 @@ namespace CadastrarPedido
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             CultureInfo CI = CultureInfo.InvariantCulture;
@@ -48,14 +47,13 @@ namespace CadastrarPedido
             Console.WriteLine();
             Console.WriteLine("ORDER SUMMARY:");
             Console.WriteLine(order);
-            Console.WriteLine(client);
+            Console.Write(client);
             Console.WriteLine("Order items:");
             foreach (OrderItem item in order.Items)
             {
                 Console.WriteLine(item);
             }
-
-            
+            Console.WriteLine($"Total price: ${order.Total().ToString("F2", CI)}");            
         }
     }
 }
